@@ -122,6 +122,16 @@ public class RNLaunchNavigatorModule extends ReactContextBaseJavaModule {
      * Internal methods
      ******************/
 
+    @ReactMethod
+    public void addListener(String eventName) {
+        // Keep: Required for RN built in Event Emitter Calls.
+    }
+
+    @ReactMethod
+    public void removeListeners(Integer count) {
+        // Keep: Required for RN built in Event Emitter Calls.
+    }
+
     private void handleExceptionWithPromise(Promise promise, Exception e){
     	promise.reject(ERROR_CODE_EXCEPTION, e);
     }
